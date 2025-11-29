@@ -1,0 +1,17 @@
+.headings {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+}
+.info{
+    text-align: justify;
+    padding: 30px;
+    margin: 20px;
+    border-color: blue;
+    width: 80vw;
+}
+.aboutus-main{
+  height: 75vh;
+}

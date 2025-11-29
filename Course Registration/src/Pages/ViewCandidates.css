@@ -1,0 +1,14 @@
+/* refer viewCourses.css */
+
+.tableDesignStud{
+    margin:60px auto;
+    width: 70%;
+    border-radius:12px; 
+}
+
+.tableDataStud{
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    
+}

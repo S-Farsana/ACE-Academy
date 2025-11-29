@@ -1,0 +1,60 @@
+.MainBody{
+    margin-top: 60px;
+background-image: linear-gradient(
+  to bottom,
+  #90e1ef59,
+  #0076b677,
+  #022f599f
+);
+    width: 100vw;
+    height: 100vh;
+}
+.headingsMain{
+    margin-bottom:20px;
+    padding-top: 100px;
+    font-size:60px;
+    font-weight:bolder;
+    text-align:center;
+    color: blue;         
+}
+.headings{
+    margin-bottom:20px;
+    margin-top:120px;
+}
+.page{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh; 
+    
+}
+
+.cardDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: aquamarine;
+    padding: 30px;
+} 
+
+.homelogo{
+    display:flex;
+    height: 120px;
+    width: 130px;
+    background-color: aqua;   
+}
+.btns{
+display: flex;
+justify-content: center;
+width: 90px;
+text-align: center;
+margin: 10px;
+}

@@ -1,0 +1,33 @@
+.MainBodyAbout{
+    margin-top: 60px;
+background-image: linear-gradient(
+  to bottom,
+  #90e1ef59,
+  #0076b677,
+  #022f599f
+);
+    width: 100vw;
+    height: 100%;
+}
+.headingsAbout{
+    margin-bottom:20px;
+    padding: 90px 0 50px 0;
+    font-size:60px;
+    font-weight:bolder;
+    text-align:center;
+    color: blue;         
+}
+.info{
+    text-align: justify;
+    font-weight: 400;
+    font-size: 25px;
+    padding: 30px;
+    margin: 20px;
+    border-color: blue;
+    width: 80vw;
+    background-color: aquamarine;
+    margin: auto;
+}
+/* .aboutus-main{
+  height: 75vh;
+} */

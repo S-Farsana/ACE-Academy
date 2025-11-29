@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CourseRegistratonBackApplication<CourseRegistraton_Back>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.CourseRegistraton_Back.CourseRegistratonBackApplication",
+            "projectName": "CourseRegistraton_Back",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

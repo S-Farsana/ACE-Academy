@@ -1,0 +1,11 @@
+.MainBodyAbout{
+    margin-top: 60px;
+background-image: linear-gradient(
+  to bottom,
+  #90e1ef59,
+  #0076b677,
+  #022f599f
+);
+    width: 100vw;
+    height: 100%;
+}
