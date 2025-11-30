@@ -7,9 +7,8 @@ import candidates from '../assets/image/candidList.jpg'
 import newCourse from '../assets/image/newcourse.jpg'
 
 function Home() {
-    useEffect(()=>{
-        
-    })
+   const admin_status = localStorage.getItem("admin") === "true";
+   const stud_status = localStorage.getItem("stud") === "true";
     return (
         <div className='MainBody'>
             <h1 className='headingsMain'>ACE ACADEMY</h1>
@@ -27,7 +26,7 @@ function Home() {
                     
                 </div>
 
-                <div className="col-sm-2 card" >
+                {/* <div className="col-sm-2 card" >
                     <img src={Register} className="card-img-top homelogo" alt="not loaded" />
                     <div className="card-body">
                         <p className="card-text">Register for your course</p>
@@ -36,8 +35,9 @@ function Home() {
                         <Link to={'/studentReg'} className="btn btn-primary btns">Register</Link>
                         </div>
                     
-                </div>
-
+                </div> */}
+                {admin_status && (
+                    <>
                 <div className="col-sm-2 card" >
                     <img src={candidates} className="card-img-top homelogo" alt="not loaded" />
                     <div className="card-body">
@@ -46,9 +46,8 @@ function Home() {
                         <footer className="card-footer">
                         <Link to={'/viewCandidates'} className="btn btn-primary btns">View</Link>
                         </footer>   
-                </div>
-
-                <div className="col-sm-2 card" >
+                </div> 
+                                <div className="col-sm-2 card" >
                     <img src={newCourse} className="card-img-top homelogo" alt="not loaded" />
                     <div className="card-body">
                         <p className="card-text">Add new courses</p>
@@ -56,7 +55,10 @@ function Home() {
                         <footer className="card-footer">
                         <Link to={'/addCourse'} className="btn btn-primary btns">Add</Link>
                         </footer>
-                </div>
+                </div> 
+</>
+                )}
+               
             </div>
         </div>
     )

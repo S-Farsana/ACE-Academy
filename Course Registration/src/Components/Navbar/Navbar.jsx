@@ -9,7 +9,9 @@ function Navbar() {
     const logout = () => {
         localStorage.removeItem("stud");
         localStorage.removeItem("student");
-        navigate("/home")
+        localStorage.removeItem("admin");
+        localStorage.removeItem("adminData")
+        navigate("/")
     };
   return (
 
@@ -24,7 +26,7 @@ function Navbar() {
             <ul className="nav nav-tabs">
               <li className="nav-item ">
                 {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}
-                <Link to={'/'} className="nav-link active" aria-current="page">Home</Link>
+                <Link to={'/'} className="nav-link" aria-current="page">Home</Link>
               </li>
               <li className="nav-item">
                 <Link to={'/aboutUs'} className="nav-link">About Us</Link>
@@ -38,14 +40,14 @@ function Navbar() {
   <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Login
   </button>
-  <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  <ul className="dropdown-menu dropdown" aria-labelledby="dropdownMenuButton1">
     <li><Link to={'/login'} className="btn btn-outline-primary login">Student Login</Link></li>
     <li><Link to={'/loginAdmin'} className="btn btn-outline-primary login">AdminLogin</Link></li>
  
   </ul>
 </div>
 
-<button className="btn btn-secondary login" onClick={logout}>Log Out</button>
+<button className="btn btn-secondary logout" onClick={logout}>Log Out</button>
         </div>
       </nav>
     </div>

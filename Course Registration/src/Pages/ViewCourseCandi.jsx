@@ -49,9 +49,9 @@ function ViewCourseCandi() {
                                         <Link to={'/studentReg'} className="btn btn-primary btns">
                                             Register
                                         </Link>
-                                     {stud_status == true ? <button className="btn btn-primary btns" onClick={() => handleDelete(i.course_id)}>
+                                     {stud_status == true ? "" : <button className="btn btn-primary btns" onClick={() => handleDelete(i.course_id)}>
                                             Delete
-                                        </button> : ""}
+                                        </button> }
                                     </div>
                                 </div>
                             </div>
