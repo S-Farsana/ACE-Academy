@@ -24,10 +24,10 @@ function Navbar() {
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Services</a>
                 <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Internships</a></li>
+                  {/* <li><a className="dropdown-item" href="#">Internships</a></li> */}
                   {/* <li><a className="dropdown-item" href="#">Courses</a></li> */}
                   <li><Link to={'/viewCourses'} className="dropdown-item" >Courses</Link></li>
-                  <li><a className="dropdown-item" href="#">One-to-One trainer</a></li>
+                  {/* <li><a className="dropdown-item" href="#">One-to-One trainer</a></li> */}
                 </ul>
               </li>
             </ul>
