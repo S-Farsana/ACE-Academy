@@ -19,12 +19,4 @@
 .login{
     display: flex;
     align-items: flex-end;
-    width: max-content;
-    margin-left:15px ;
-    margin-top: 10px;}
-
-.logout{
-    margin-left: 17px;
 }
-    
-

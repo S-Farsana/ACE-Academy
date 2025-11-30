@@ -1,20 +1,10 @@
 import React from 'react'
 import "../Navbar/Navbar.css"
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 function Navbar() {
-  const navigate = useNavigate();
-
-    const logout = () => {
-        localStorage.removeItem("stud");
-        localStorage.removeItem("student");
-        localStorage.removeItem("admin");
-        localStorage.removeItem("adminData")
-        navigate("/")
-    };
   return (
-
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top NavBar " >
         <div className="container-fluid">
@@ -26,28 +16,23 @@ function Navbar() {
             <ul className="nav nav-tabs">
               <li className="nav-item ">
                 {/* <a className="nav-link active" aria-current="page" href="#">Home</a> */}
-                <Link to={'/'} className="nav-link" aria-current="page">Home</Link>
+                <Link to={'/'} className="nav-link active" aria-current="page">Home</Link>
               </li>
               <li className="nav-item">
                 <Link to={'/aboutUs'} className="nav-link">About Us</Link>
               </li>
-              <li className="nav-item">
-                <Link to={'/home'} className="nav-link">Dashboard</Link>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Services</a>
+                <ul className="dropdown-menu">
+                  <li><a className="dropdown-item" href="#">Internships</a></li>
+                  {/* <li><a className="dropdown-item" href="#">Courses</a></li> */}
+                  <li><Link to={'/viewCourses'} className="dropdown-item" >Courses</Link></li>
+                  <li><a className="dropdown-item" href="#">One-to-One trainer</a></li>
+                </ul>
               </li>
             </ul>
           </div>
-          <div className="dropdown">
-  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Login
-  </button>
-  <ul className="dropdown-menu dropdown" aria-labelledby="dropdownMenuButton1">
-    <li><Link to={'/login'} className="btn btn-outline-primary login">Student Login</Link></li>
-    <li><Link to={'/loginAdmin'} className="btn btn-outline-primary login">AdminLogin</Link></li>
- 
-  </ul>
-</div>
-
-<button className="btn btn-secondary logout" onClick={logout}>Log Out</button>
+<Link to={'/login'} className="btn btn-outline-primary login">Login</Link>
         </div>
       </nav>
     </div>

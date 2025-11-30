@@ -1,30 +1,16 @@
-.MainBody{
-    margin-top: 60px;
-background-image: linear-gradient(
-  to bottom,
-  #90e1ef59,
-  #0076b677,
-  #022f599f
-);
-    width: 100vw;
-    height: 100vh;
-}
-.headingsMain{
+.headings{
     margin-bottom:20px;
-    padding-top: 100px;
+    margin-top:100px;
     font-size:60px;
     font-weight:bolder;
     text-align:center;
-    color: blue;         
-}
-.headings{
-    margin-bottom:20px;
-    margin-top:120px;
 }
 .page{
     display: flex;
     flex-direction:column;
     align-items: center;
+    
+    background-color:rgba(193, 182, 215, 0.542);
     min-width: 100vw;
     min-height: 100vh; 
     
@@ -33,22 +19,25 @@ background-image: linear-gradient(
 .cardDiv{
     display: flex;
     flex-direction: row;
-    justify-content: center;   
+    justify-content: center;
+    
 }
 
 .card{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 20px;
     background-color: aquamarine;
-    padding: 30px;
+    
 } 
+
 
 .homelogo{
     display:flex;
-    height: 120px;
-    width: 130px;
+    margin: 10px;
+    height: 100px;
+    width: 100px;
     background-color: aqua;   
 }
 .btns{
@@ -56,5 +45,4 @@ display: flex;
 justify-content: center;
 width: 90px;
 text-align: center;
-margin: 10px;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import '../Pages/Home.css'
 import { Link } from 'react-router-dom'
 import ViewCourses from '../assets/image/couses.png'
@@ -7,12 +7,10 @@ import candidates from '../assets/image/candidList.jpg'
 import newCourse from '../assets/image/newcourse.jpg'
 
 function Home() {
-   const admin_status = localStorage.getItem("admin") === "true";
-   const stud_status = localStorage.getItem("stud") === "true";
     return (
-        <div className='MainBody'>
-            <h1 className='headingsMain'>ACE ACADEMY</h1>
-            <h2 className='headings' style={{marginBottom:'40px',marginTop:'10px'}}>WELCOMES YOU</h2>
+        <div >
+            <h1 className='headings'>ACE ACADEMY</h1>
+            <h2 className='headings' style={{marginBottom:'40px',fontSize:'35px',marginTop:'10px'}}>WELCOMES YOU</h2>
 
             <div className='row cardDiv'>
 
@@ -21,12 +19,12 @@ function Home() {
                     <div className="card-body">
                         <p className="card-text">Explore job ready courses</p>
                         </div>
-                        <div className='card-footer'><Link to={'/viewCourse'} className="btn btn-primary btns" >Explore</Link></div>
+                        <div className='card-footer'><Link to={'/viewCourses'} className="btn btn-primary btns" >Explore</Link></div>
                         
                     
                 </div>
 
-                {/* <div className="col-sm-2 card" >
+                <div className="col-sm-2 card" >
                     <img src={Register} className="card-img-top homelogo" alt="not loaded" />
                     <div className="card-body">
                         <p className="card-text">Register for your course</p>
@@ -35,9 +33,8 @@ function Home() {
                         <Link to={'/studentReg'} className="btn btn-primary btns">Register</Link>
                         </div>
                     
-                </div> */}
-                {admin_status && (
-                    <>
+                </div>
+
                 <div className="col-sm-2 card" >
                     <img src={candidates} className="card-img-top homelogo" alt="not loaded" />
                     <div className="card-body">
@@ -45,9 +42,11 @@ function Home() {
                         </div>
                         <footer className="card-footer">
                         <Link to={'/viewCandidates'} className="btn btn-primary btns">View</Link>
-                        </footer>   
-                </div> 
-                                <div className="col-sm-2 card" >
+                        </footer>
+                    
+                </div>
+
+                <div className="col-sm-2 card" >
                     <img src={newCourse} className="card-img-top homelogo" alt="not loaded" />
                     <div className="card-body">
                         <p className="card-text">Add new courses</p>
@@ -55,10 +54,7 @@ function Home() {
                         <footer className="card-footer">
                         <Link to={'/addCourse'} className="btn btn-primary btns">Add</Link>
                         </footer>
-                </div> 
-</>
-                )}
-               
+                </div>
             </div>
         </div>
     )

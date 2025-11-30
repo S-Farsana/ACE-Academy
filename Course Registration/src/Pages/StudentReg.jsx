@@ -14,8 +14,8 @@ function StudentReg() {
   }
 
   return (
-    <div className='MainBodyAbout'>
-      <h1 className='headingsAbout'>Register   </h1>
+    <div>
+      <h1 className='headings'>Register for "a Course"</h1>
 
       <div className='formDiv'>
         <form onSubmit={handleSubmit(onSubmit)} className='formData'>
@@ -23,34 +23,34 @@ function StudentReg() {
           <input type='text'
             placeholder='Enter your Name'
             className='feild'
-            {...register('stud_name',{required:'Student name required'})} />
-            {errors.stud_name && <p className='error'>{errors.stud_name.message}</p> }
+            {...register('studName',{required:'Student name required'})} />
+            {errors.studName && <p className='error'>{errors.studName.message}</p> }
 
           <input
             type='email'
             placeholder='Enter your email'
             className='feild'
-            {...register('stud_email',{required: 'email required'})}
+            {...register('studMail',{required: 'email required'})}
              />
-             {errors.stud_email && <p className='errror'>{errors.stud_email.message}</p>}
+             {errors.studMail && <p className='errror'>{errors.studMail.message}</p>}
 
           <input
             type='number'
             placeholder='Mobile Number'
             className='feild'
-            {...register('stud_mob',{required:'Mobile no.required'})}/>
-            {errors.stud_mob && <p className='error'>{errors.stud_mob.message}</p>}
+            {...register('studMob',{required:'Mobile no.required'})}/>
+            {errors.studMob && <p className='error'>{errors.studMob.message}</p>}
 
 
           <input
             type='text'
             placeholder='Enter Qualification'
             className='feild' 
-            {...register('stud_qualification',{required:'Enter your qualification'})}/>
-            {errors.stud_qualification && <p className='error'>{errors.stud_qualification.message}</p>}
+            {...register('studQualification',{required:'Enter your qualification'})}/>
+            {errors.studQualification && <p className='error'>{errors.studQualification.message}</p>}
 
 
-          {/* <input
+          <input
             type="text"
             name="studDateOfJoin"
             className="feild"
@@ -58,7 +58,7 @@ function StudentReg() {
             onBlur={(e) => { if (!e.target.value) e.target.type = 'text'; }}
             placeholder="Enter Joining Date"
             {...register('studDateOfJoin',{required:'Enter the joining date'})}/>
-            {errors.studDateOfJoin && <p className='error'>{errors.studDateOfJoin.message}</p>} */}
+            {errors.studDateOfJoin && <p className='error'>{errors.studDateOfJoin.message}</p>}
          
 
           <button type='submit' className="btn btn-primary btns1">Submit</button>
