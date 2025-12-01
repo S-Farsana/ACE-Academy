@@ -1,71 +1,53 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { useNavigate } from "react-router-dom";
+import axios from 'axios'
 import '../Pages/Login.css'
 
 function Login() {
-    //     const[user,setUser]=useState("")
-    //     const[pass,setPass] = useState("")
-
-    // function getUser(e){
-    //         setUser(e.target.value);
-    //             }
-
-    // function getPass(e){
-    //     setPass(e.target.value)
-    // }
-
-    // function handleSubmit(e) {
-    // e.preventDefault();
-    // console.log("Form submitted");
-    // }
-
-
-    {/* <form onSubmit={handleSubmit} className='formData' >
-            <div className='feild'>
-                <label htmlFor="username">Username  </label>
-            <input type='text' name='username' value={user} onChange={getUser} required></input>
-            </div>
-            <div className='feild'>
-<label htmlFor='pwd'>Password   </label>
-            <input type='password' name='pwd' value={pass} onChange={getPass} required></input>
-            
-            </div>
-            
-
-            <button type='submit' className="btn btn-primary">Submit</button>
-        </form> */}
-
+    const navigate=useNavigate()
     const { register,
         handleSubmit,
-        formState: { errors } 
+        formState: { errors }
     } = useForm();
 
     const onSubmit = (data) => {
-        console.log('Form submitted:', data);
-        alert("Sucess")
-    };
+        axios
+            // Post login data to backend 
+            .post("http://localhost:8080/api/student/login", data)
+            .then((res) => {
+                alert("Login successful!")
+                console.log('Form submitted:', data);
+                console.log("user data:", res.data);
+                localStorage.setItem("stud", true)
+                // You can store in local storage 
+                localStorage.setItem("student", JSON.stringify(res.data),);
+                // Redirect to dashboard/homepage 
+                navigate("/");
+            })
+    }
     return (
         <div>
             <h1 className='headings'>Login</h1>
             <div className='loginDiv'>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="formData">
-                <div className="feild">
-                    <label htmlFor="username ">Username : </label>
-                    <input type="text" {...register('username', { required: 'Username is required' })} />
-                    {errors.username && (<p className="error">{errors.username.message}</p>)}
-                </div>
+                <form onSubmit={handleSubmit(onSubmit)} className="formData">
+                    <div className="feild">
+                        <label >Username </label>
+                        <input type="text" {...register('studEmail', { required: 'Username is required' })} />
+                        {errors.studEmail && (<p className="error">{errors.studEmail.message}</p>)}
+                    </div>
 
-                <div className="feild">
-                    <label htmlFor="pwd">Password</label>
-                    <input type="password"
-                        {...register('pwd', { required: 'Password is required' })} />
+                    <div className="feild">
+                        <label>Password </label>
+                        <input type="password"
+                            {...register('studPassword', { required: 'Password is required' })} />
 
-                    {errors.pwd && (<p className="error">{errors.pwd.message}</p>)}
-                </div>
+                        {errors.studPassword && (<p className="error">{errors.studPassword.message}</p>)}
+                    </div>
 
-                <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                </form>
             </div>
 
         </div>
