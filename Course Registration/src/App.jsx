@@ -10,6 +10,7 @@ import ViewCandidates from './Pages/viewCandidates'
 import ViewCourses from './Pages/viewCourses'
 import AboutUs from './Pages/AboutUs'
 import ExampleFooter from './Components/ExampleFooter/ExampleFooter'
+import LoginAdmin from './Pages/LoginAdmin'
 // import Demo from './Pages/demo'
 // hello
 //bvdsjvsjd
@@ -23,6 +24,7 @@ function App() {
 
       <Route path='/' element={<Home/>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/loginAdmin' element={<LoginAdmin/>}/>
       <Route path='/aboutUs' element={<AboutUs/>}/>
       <Route path='/addCourse' element={<AddCourse/>}/>
       <Route path='/studentReg' element={<StudentReg/>}/>

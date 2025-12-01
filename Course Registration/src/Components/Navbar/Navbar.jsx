@@ -32,7 +32,16 @@ function Navbar() {
               </li>
             </ul>
           </div>
-<Link to={'/login'} className="btn btn-outline-primary login">Login</Link>
+          <div className="btn-group">
+  <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Login/Register
+  </button>
+  <ul className="dropdown-menu">
+    <li><Link to={'/login'} className="btn btn-outline-primary login">Login for Student</Link></li>
+    <li><Link to={'/loginAdmin'} className="btn btn-outline-primary login">Login for Admin</Link></li>
+  </ul>
+</div>
+
         </div>
       </nav>
     </div>
