@@ -19,7 +19,9 @@ function Navbar() {
                 <Link to={'/'} className="nav-link active" aria-current="page">Home</Link>
               </li>
               <li className="nav-item">
-                <Link to={'/aboutUs'} className="nav-link">About Us</Link>
+                <Link to={'/aboutUs'} className="nav-link">About Us</Link></li>
+                <li className="nav-item">
+                <Link to={'/dashboard'} className="nav-link">Dashboard</Link>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Services</a>
@@ -32,7 +34,9 @@ function Navbar() {
               </li>
             </ul>
           </div>
+          
           <div className="btn-group">
+            {/* login / Register */}
   <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Login/Register
   </button>
@@ -40,8 +44,9 @@ function Navbar() {
     <li><Link to={'/login'} className="btn btn-outline-primary login">Login for Student</Link></li>
     <li><Link to={'/loginAdmin'} className="btn btn-outline-primary login">Login for Admin</Link></li>
   </ul>
+  {/* logout */}
+  <Link to={'/logout'} type="button" className="btn btn-primary">Log Out</Link>
 </div>
-
         </div>
       </nav>
     </div>

@@ -17,7 +17,7 @@ function LoginAdmin() {
                 localStorage.setItem("admin", true);
                 localStorage.setItem("adminData", JSON.stringify(res.data));
 
-                navigate("/");   // redirect to admin dashboard
+                navigate("/dashboard");   // redirect to admin dashboard
             })
             .catch(err => {
                 if (err.response) {
