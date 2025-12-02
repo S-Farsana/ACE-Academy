@@ -1,6 +1,7 @@
 package com.example.CourseRegistraton_Back.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,11 +20,11 @@ public class AdminController {
     private AdminRepo adminRepo;
 
     @PostMapping("/login")
-    public Object loginAdmin(@RequestBody Admin admin) {
+    public ResponseEntity<?> loginAdmin(@RequestBody Admin admin) {
 
         return adminRepo.findByAdminEmail(admin.getAdminEmail())
                 .filter(a -> a.getAdminPassword().equals(admin.getAdminPassword()))
-                .<Object>map(a -> a)
-                .orElse("Invalid email or password!");
+                .<ResponseEntity<?>>map(a -> ResponseEntity.ok(a)) // return admin object
+                .orElse(ResponseEntity.status(400).body("Invalid email or password!")); // return 400 error
     }
 }

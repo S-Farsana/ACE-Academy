@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 function ViewCourseCandi() {
     const [course, setCourse] = useState([])
 
-   const stud_status = localStorage.getItem("stud") === "true";
+    const admin_status = localStorage.getItem("admin") === "true";
 
     useEffect(() => {
         axios
@@ -49,9 +49,13 @@ function ViewCourseCandi() {
                                         <Link to={'/studentReg'} className="btn btn-primary btns">
                                             Register
                                         </Link>
-                                     {stud_status == true ? "" : <button className="btn btn-primary btns" onClick={() => handleDelete(i.course_id)}>
-                                            Delete
-                                        </button> }
+                                        {admin_status === true ? (
+                                            <button
+                                                className="btn btn-primary btns"
+                                                onClick={() => handleDelete(i.course_id)}>
+                                                Delete
+                                            </button>
+                                        ) : null}
                                     </div>
                                 </div>
                             </div>

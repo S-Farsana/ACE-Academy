@@ -17,32 +17,38 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.CourseRegistraton_Back.Model.Course;
+import com.example.CourseRegistraton_Back.Model.Student;
 import com.example.CourseRegistraton_Back.Repository.CourseRepo;
+import com.example.CourseRegistraton_Back.Repository.StudentRepo;
+
+
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/course")
+@RequestMapping("/api")
 public class CourseController {
 
     @Autowired
     private CourseRepo courseRepo;
 
+    @Autowired
+private StudentRepo studentRepo;
     // REGISTER COURSE
-    @PostMapping
+    @PostMapping("/course")
     public ResponseEntity<Course> addCourse(@RequestBody Course course) {
         Course savedCourse = courseRepo.save(course);
         return new ResponseEntity<>(savedCourse, HttpStatus.CREATED);
     }
 
     // GET ALL COURSES
-    @GetMapping
+    @GetMapping("/courses")
     public ResponseEntity<List<Course>> getAllCourses() {
         List<Course> courseList = courseRepo.findAll();
         return new ResponseEntity<>(courseList, HttpStatus.OK);
     }
 
     // GET COURSE BY ID
-    @GetMapping("/{id}")
+    @GetMapping("/course/{id}")
     public ResponseEntity<Course> getCourseById(@PathVariable Long id) {
         Optional<Course> savedCourse = courseRepo.findById(id);
 
@@ -54,7 +60,7 @@ public class CourseController {
     }
 
     // UPDATE COURSE
-    @PutMapping("/{id}")
+    @PutMapping("/course/{id}")
     public ResponseEntity<Course> updateCourse(
             @PathVariable Long id,
             @RequestBody Course newData) {
@@ -80,7 +86,7 @@ public class CourseController {
     }
 
     //DELETE A COURSE
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/course/{id}")
     public ResponseEntity<Void> delCourse(@PathVariable Long id) {
         Optional<Course> savedCourse = courseRepo.findById(id);
         if (savedCourse.isPresent()) {
@@ -90,4 +96,5 @@ public class CourseController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    
 }

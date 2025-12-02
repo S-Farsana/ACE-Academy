@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
@@ -23,7 +22,7 @@ function Login() {
                 // You can store in local storage 
                 localStorage.setItem("student", JSON.stringify(res.data),);
                 // Redirect to dashboard/homepage 
-                navigate("/");
+                navigate("/studentDashboard");
             })
     }
     return (

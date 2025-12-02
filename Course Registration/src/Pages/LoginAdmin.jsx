@@ -17,15 +17,11 @@ function LoginAdmin() {
                 localStorage.setItem("admin", true);
                 localStorage.setItem("adminData", JSON.stringify(res.data));
 
-                navigate("/dashboard");   // redirect to admin dashboard
+                navigate("/adminDashboard");   // redirect to admin dashboard
             })
-            .catch(err => {
-                if (err.response) {
-                    alert(err.response.data.error || "Login failed");
-                    console.error(err);
-                } else {
-                    alert("Login failed");
-                }
+           .catch((error) => {
+    // backend sends 400 → goes here
+    alert("Invalid email or password!");
             });
     };
 
