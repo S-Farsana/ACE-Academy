@@ -1,6 +1,6 @@
 package com.example.CourseRegistraton_Back.Model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,7 +8,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import lombok.Data;
 
 @Entity
@@ -29,8 +30,11 @@ public class Student {
     @Column(name = "stud_password")
     private String studPassword;
 
-    @ManyToOne
-    @JoinColumn(name = "course_id")   // FK column
-    @JsonBackReference
-    private Course course;
+   @ManyToMany
+@JoinTable(
+    name = "student_courses",
+    joinColumns = @JoinColumn(name = "stud_id"),
+    inverseJoinColumns = @JoinColumn(name = "course_id")
+)
+private List<Course> courses;
 }

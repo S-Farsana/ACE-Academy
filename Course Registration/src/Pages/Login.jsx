@@ -2,7 +2,9 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 import '../Pages/Login.css'
+import { Link } from 'react-router-dom';
 
+// ^^^^^^^^^^^^^STUDENT  LOGIN^^^^^^^^^^^^
 function Login() {
     const navigate=useNavigate()
     const { register,
@@ -46,6 +48,7 @@ function Login() {
                     </div>
 
                     <button type="submit" className="btn btn-primary">Submit</button>
+                    <Link to ='/register'><p className='giveName'>Click here to register</p></Link>
                 </form>
             </div>
 

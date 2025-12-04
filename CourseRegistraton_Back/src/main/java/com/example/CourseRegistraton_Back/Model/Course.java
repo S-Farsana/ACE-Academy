@@ -2,14 +2,13 @@ package com.example.CourseRegistraton_Back.Model;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToMany;
 import lombok.Data;
 
 @Entity
@@ -25,8 +24,10 @@ public class Course {
     private double course_fee;
     private String trainer_name;
 
-    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
-    @JsonManagedReference
-    private List<Student> students;
+   @ManyToMany(mappedBy = "courses")
+   @JsonIgnore
+private List<Student> students;
+    // @JsonManagedReference
+    // private List<Student> students;
 
 }
