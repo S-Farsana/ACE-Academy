@@ -23,7 +23,7 @@ import Register from './Pages/Register'
 //bvdsjvsjd
 function App() {
   return (
-    <div>
+    <div className='mainPage'>
 
       <Navbar />
       <Routes>
@@ -47,7 +47,7 @@ function App() {
       </Routes>
 
       {/* <Footer/> */}
-      <ExampleFooter />
+      {/* <ExampleFooter /> */}
 
     </div>
   )

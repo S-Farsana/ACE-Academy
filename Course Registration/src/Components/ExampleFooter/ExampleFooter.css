@@ -3,3 +3,41 @@
     bottom: 0;
     width: 100vw;
 }
+ 
+.footer-custom {
+  background: #2d2f33;
+  padding-top: 40px;
+}
+
+.company-name {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.tagline {
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.social-area .social {
+  width: 42px;
+  height: 42px;
+  background-color: #3a3d42;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 10px;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.social-area .social:hover {
+  background-color: #6366f1;
+}
+
+.copy {
+  background: #232427;
+  font-size: 14px;
+}

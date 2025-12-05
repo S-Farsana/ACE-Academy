@@ -1,22 +1,86 @@
-.NavBar{
-    /* display: flex;
-    /* width: 100vw !important; */
-    /* height:max-content; */
-    /* margin: 0; */
-    background-color: rgb(115, 115, 235);
-    padding-right: 10px;
-
+.navbar-gradient {
+  background: linear-gradient(
+    90deg,
+    #08203a,
+    #135a9d,
+    #1fa5ff,
+    #67deff,
+    #1fa5ff,
+    #135a9d,
+    #08203a
+  );
+  background-size: 300% 300%;
+  border-bottom: 3px solid rgba(65, 49, 94, 0.904);
+  box-shadow: 0 0 20px #67deff59;
+  padding: 0 20px;
 }
-.BrandName{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: bolder;
-    font-size:28px;
-    text-shadow: 10px;
-    color: rgb(19, 7, 249);
-    margin-bottom: 1px;
-    /* padding-top: 10px; */
+
+/* Neon text */
+.navbar-gradient .navbar-brand,
+.navbar-gradient .nav-link {
+  color: #eee8ff !important;
+  text-shadow: 0 0 5px #1404fc;
+  padding-left: 15px;
+  margin: 0px;
+  
+}
+.brandBox{
+    min-width:550px;  
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.navbar-brand{
+  font-size: 35px !important; 
+  text-align: center !important;
+  }
+.tagline{
+  position:absolute;
+  left:150px;
+  top :65px;
+    color: #eee8ff;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    
+    font-style: italic;
+    font-size: 16px !important;
+
+    
+}
+.button,.login{
+  margin:10px;
+  color: #eee8ff;
+  background-color: rgb(110, 34, 181) !important;
 }
 .login{
+ margin:5px;
+}
+.loginMenu{
+  background: linear-gradient(
+    180deg,
+    #135a9d,
+    #1fa5ff,
+    #67deff
+  );
+    
+}
+/* Hover glow */
+.navbar-gradient .nav-link:hover {
+  color: #67deff !important;
+  text-shadow: 0 0 10px #67deff;
+}
+
+.navbar-gradient .navbar-brand{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size:30px;
+      color: #f4f4f7 !important;
+    
+   
+    
+   
+}
+/* .login{
     display: flex;
     align-items: flex-end;
-}
+    margin-left: 10px;
+} */

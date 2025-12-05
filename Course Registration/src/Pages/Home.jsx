@@ -10,9 +10,9 @@ function Home() {
     const student = JSON.parse(localStorage.getItem('stud'))
 
     return (
-        <div >
-            <h1 className='headings'>ACE ACADEMY</h1>
-            <h2 className='headings' style={{ marginBottom: '40px', fontSize: '35px', marginTop: '10px' }}>WELCOMES YOU</h2>
+        <div className='homePage'>
+            <h1 className='headingsMainHome'>ACE ACADEMY</h1>
+            <h2 className='headingsSubHome' style={{ marginBottom: '40px', fontSize: '35px', marginTop: '10px' }}>WELCOMES YOU</h2>
 
             {/* _____Admin View____________ */}
 
@@ -49,7 +49,7 @@ function Home() {
                 </div>
                 : "")}
 
-{/* _______________Other User View(guest and student_________) */}
+{/* _______________ Other User View(guest and student) _________ */}
 
            {(!admin) ? (
     <div className='col-sm-2 card'>
