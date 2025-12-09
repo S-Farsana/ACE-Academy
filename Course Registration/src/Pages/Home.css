@@ -21,8 +21,8 @@
     font-weight:bold;
     text-align:center;
     text-decoration: solid;
-    text-shadow: 0 0 5px #ba84c6;
-    color:rgba(222, 202, 220, 0.838)
+    text-shadow: 0 0 5px #e8b1f4;
+    color:rgba(70, 13, 64, 0.838)
 }
 
 
@@ -32,17 +32,16 @@
     justify-content: center;
     
 }
-
 .card{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px;
-    background-color: aquamarine;
-    
+    background: linear-gradient(180deg,
+    #ee82ee5e, 
+    #cf70f88d, 
+    #2302425d );
 } 
-
-
 .homelogo{
     display:flex;
     margin: 10px;

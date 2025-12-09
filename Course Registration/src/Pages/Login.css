@@ -1,7 +1,44 @@
+.mainLogin{
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #08203a, /* deeper neon navy */
+     #135a9dd7, /* neon steel blue */ 
+     #1fa5ffcb, /* bright polished neon cyan-blue */
+      #67deffa2,
+       #1fa5ffcb, 
+       #08203ae7 /* glowing neon edge */);
+    background-attachment: fixed;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.headingLogin{
+position:absolute;
+top:160px;
+
+    font-size:50px;
+    font-weight:bold;
+    text-decoration: solid;
+    text-shadow: 0 0 5px #e8b1f4;
+    color:rgba(70, 13, 64, 0.838)
+}
+.loginDiv{
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;   
+}
 .formData{
-  background: #fff;
+    background: linear-gradient(180deg,
+    #ee82ee5e, 
+    #cf70f88d, 
+    #9b30ff35 );
+  position: absolute;
+  top:300px;
+  
   padding: 2rem 2.5rem;
   border-radius: 12px;
+  
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
@@ -11,20 +48,11 @@
   flex-direction: column;
   margin-bottom: 1.25rem;
 }
-.loginDiv{
-      display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #f8f9fa;
-  padding: 20px;
-    
-}
+
 .form-field label {
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: #555;
+  /* color: #9118c9; */
 }
 
 .form-field input {
@@ -32,8 +60,7 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
-  outline: none;
-  transition: border-color 0.2s;
+  
 }
 
 .form-field input:focus {
@@ -49,15 +76,14 @@
 .btn-primary {
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
-  border: none;
-  color: white;
+   color: #eee8ff;
+  background-color: rgb(110, 34, 181) !important;
+  border: 0;
   font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s;
 }
-
-.btn-primary:hover {
-  background-color: #26c610;
+.registerLink{
+  color: rgb(157, 70, 159);
 }

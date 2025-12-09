@@ -1,3 +1,7 @@
+/*Navbar size */
+.NavBar{
+  padding: 2px;
+}
 .navbar-gradient {
   background: linear-gradient(
     90deg,
@@ -12,7 +16,7 @@
   background-size: 300% 300%;
   border-bottom: 3px solid rgba(65, 49, 94, 0.904);
   box-shadow: 0 0 20px #67deff59;
-  padding: 0 20px;
+ 
 }
 
 /* Neon text */
@@ -26,8 +30,8 @@
 }
 .brandBox{
     min-width:550px;  
-    margin-bottom: 15px;
-    margin-top: 15px;
+    margin-bottom: 2px;
+
 }
 .navbar-brand{
   font-size: 35px !important; 
@@ -35,21 +39,20 @@
   }
 .tagline{
   position:absolute;
-  left:150px;
+  left:125px;
   top :65px;
     color: #eee8ff;
     margin-top: 5px;
     margin-bottom: 0px;
-    
     font-style: italic;
     font-size: 16px !important;
-
-    
+ 
 }
-.button,.login{
-  margin:10px;
+.buttons,.login{
+  margin-right: 15px;
   color: #eee8ff;
   background-color: rgb(110, 34, 181) !important;
+  
 }
 .login{
  margin:5px;
@@ -61,7 +64,6 @@
     #1fa5ff,
     #67deff
   );
-    
 }
 /* Hover glow */
 .navbar-gradient .nav-link:hover {
@@ -74,13 +76,4 @@
     font-weight: bolder;
     font-size:30px;
       color: #f4f4f7 !important;
-    
-   
-    
-   
 }
-/* .login{
-    display: flex;
-    align-items: flex-end;
-    margin-left: 10px;
-} */

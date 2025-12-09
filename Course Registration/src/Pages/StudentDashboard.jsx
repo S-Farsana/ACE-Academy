@@ -6,24 +6,25 @@ function StudentDashboard() {
 
   return (
     <div className="profile-container">
+      <h1 className="studDash studHeading">Welcome * <b><i>{student.stud_name}</i></b> * </h1>
 
       {/* Student Profile Card */}
-      <div className="profile-card">
-        <div className="avatar">
+      <div className="profile-card studDetail">
+        {/* <div className="avatar">
           {student?.stud_name?.charAt(0)}
         </div>
+        <h2>{student?.stud_name}</h2> */}
 
-        <h2>{student?.stud_name}</h2>
-        <p className="email">{student?.studEmail}</p>
-
-        <div className="info-section">
+      <div className="info-section">
+        <h4>{student?.stud_name}</h4>
+        <p><strong>E-mail id: </strong>{student?.studEmail}</p>
           <p><strong>Mobile:</strong> {student?.stud_mob}</p>
           <p><strong>Qualification:</strong> {student?.stud_qualification}</p>
         </div>
       </div>
 
       {/* Course Details */}
-      <div className="course-card">
+      <div className="course-card studCourseDash">
         <h3>Enrolled Course</h3>
 {/* to check whether a student has no courses, */}
         {student?.courses?.length === 0 ? (

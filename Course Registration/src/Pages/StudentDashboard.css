@@ -1,22 +1,49 @@
 .profile-container {
   display: flex;
   gap: 2rem;
-  padding: 40px;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  background: #f5f7fa;
-  min-height: 100vh;
+  justify-content: center; 
+  align-items: center;
+  margin: 0;
+  background: linear-gradient(180deg, #08203a,
+  #135a9dd7, 
+  #1fa5ffcb, 
+  #67deffa2,
+  #1fa5ffcb, 
+  #08203ae7);
+  background-attachment: fixed;
+  padding: 20px;
 }
-
+.studHeading{
+  position:absolute;
+  top:180px !important;
+  font-size:50px;
+  font-weight:bold;
+  text-decoration: solid;
+  text-shadow: 0 0 5px #e8b1f4;
+  color:rgba(70, 13, 64, 0.838) 
+}
 /* Profile Card */
 .profile-card {
-  background: #fff;
+
   width: 320px;
   padding: 25px;
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.studDetail{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background: linear-gradient(180deg,
+    #ee82ee5e, 
+    #cf70f88d, 
+    #2302425d );
+      
+    position: absolute;
+    top: 260px;
+
 }
 
 .avatar {
@@ -49,11 +76,27 @@
 
 /* Course Card */
 .course-card {
-  background: #fff;
+  background: #fdf5fda8;
   width: 350px;
   padding: 25px;
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.studCourseDash{
+    display: flex;
+  width:max-content;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    background: linear-gradient(180deg,
+    #ee82ee5e, 
+    #cf70f88d, 
+    #2302425d );
+      
+    position: absolute;
+    top: 460px;
+    gap:10px;
+
 }
 
 .course-card h3 {

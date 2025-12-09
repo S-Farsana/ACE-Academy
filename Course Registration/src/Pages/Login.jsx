@@ -28,8 +28,8 @@ function Login() {
             })
     }
     return (
-        <div>
-            <h1 className='headings'>Login</h1>
+        <div className='mainLogin'>
+            <h1 className='headingLogin'>Login</h1>
             <div className='loginDiv'>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="formData">
@@ -47,8 +47,8 @@ function Login() {
                         {errors.studPassword && (<p className="error">{errors.studPassword.message}</p>)}
                     </div>
 
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                    <Link to ='/register'><p className='giveName'>Click here to register</p></Link>
+                    <button type="submit" className="btn btn-primary"> Submit</button>
+                    <Link to ='/register'><p className='registerLink'>Click here to register</p></Link>
                 </form>
             </div>
 

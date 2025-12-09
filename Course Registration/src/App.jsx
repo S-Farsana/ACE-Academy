@@ -46,7 +46,7 @@ function App() {
         {/* <Route path='/demo' element={<><Navbar/><Demo/><Footer/></>}/> */}
       </Routes>
 
-      {/* <Footer/> */}
+      <Footer/>
       {/* <ExampleFooter /> */}
 
     </div>

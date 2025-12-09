@@ -1,17 +1,26 @@
-.headings {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 25px;
-  color: #333;
+.aboutUs{
+  display: flex;
+  justify-content: center;
 }
+.headingAboutUs{
+position:absolute;
+top:200px;
+
+    font-size:50px;
+    font-weight:bold;
+    text-decoration: solid;
+    text-shadow: 0 0 5px #e8b1f4;
+    color:rgba(70, 13, 64, 0.838)
+}
+
 .info{
     text-align: justify;
     padding: 30px;
     margin: 20px;
-    border-color: blue;
-    width: 80vw;
-}
-.aboutus-main{
-  height: 75vh;
+    background-color: #dfb1f476 !important;
+    color: black;
+     font-size: 26px;
+    width: 75%;
+    position: absolute;
+    top:300px;
 }
