@@ -6,7 +6,7 @@ function StudentDashboard() {
 
   return (
     <div className="profile-container">
-      <h1 className="studDash studHeading">Welcome * <b><i>{student.stud_name}</i></b> * </h1>
+      <h1 className="studDash studHeading">Welcome * <b><i>{student.stud_name}</i></b>*</h1>
 
       {/* Student Profile Card */}
       <div className="profile-card studDetail">

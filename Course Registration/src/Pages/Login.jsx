@@ -22,10 +22,14 @@ function Login() {
                 console.log("user data:", res.data);
                 localStorage.setItem("stud", true)
                 // You can store in local storage 
-                localStorage.setItem("student", JSON.stringify(res.data),);
-                // Redirect to dashboard/homepage 
+                localStorage.setItem("student", JSON.stringify(res.data));
+                // Redirect to dashboard
                 navigate("/studentDashboard");
             })
+            .catch((error) => {
+    console.log(error.response?.data);
+    alert(error.response?.data?.message || "Invalid email or password!");
+});
     }
     return (
         <div className='mainLogin'>
@@ -35,7 +39,10 @@ function Login() {
                 <form onSubmit={handleSubmit(onSubmit)} className="formData">
                     <div className="feild">
                         <label >Username </label>
-                        <input type="text" {...register('studEmail', { required: 'Username is required' })} />
+                        <input 
+                        type="text" 
+                        {...register('studEmail', 
+                        { required: 'Username is required' })} />
                         {errors.studEmail && (<p className="error">{errors.studEmail.message}</p>)}
                     </div>
 
@@ -48,7 +55,7 @@ function Login() {
                     </div>
 
                     <button type="submit" className="btn btn-primary"> Submit</button>
-                    <Link to ='/register'><p className='registerLink'>Click here to register</p></Link>
+                    <Link to ='/register'><p className='registerLink'><b>Click here to register</b></p></Link>
                 </form>
             </div>
 

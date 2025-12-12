@@ -56,10 +56,10 @@ function ViewCourseCandi() {
       });
   };
     return (
-       <div className="MainBodyAbout">
-      <h1 className="headingsAbout">Courses Offered</h1>
+       <div className="mainViewCourse">
+      <h1 className="headViewCourse">Courses Offered</h1>
 
-      <div className="container-md">
+      <div className="container-md cardArea">
         <div className="row">
           {courses.map((course) => (
             <div className="col-md-4" key={course.course_id}>
@@ -87,7 +87,7 @@ function ViewCourseCandi() {
                   <div className="buttonDiv">
                     {!admin_status && (
                       <button
-                        className="btn btn-primary btns"
+                        className="btn btn-primary btnViewCourse"
                         onClick={() => handleRegister(course.course_id)}
                       >
                         Enroll
@@ -96,7 +96,7 @@ function ViewCourseCandi() {
 
                     {admin_status && (
                       <button
-                        className="btn btn-danger btns"
+                        className="btn btn-danger btnViewCourse"
                         onClick={() => handleDelete(course.course_id)}
                       >
                         Delete

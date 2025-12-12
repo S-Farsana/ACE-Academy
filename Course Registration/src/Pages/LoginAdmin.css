@@ -1,0 +1,90 @@
+.mainLoginAdmin{
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, 
+  #08203a, 
+  #135a9dd7, 
+  #1fa5ffcb, 
+  #67deffa2,
+  #1fa5ffcb, 
+  #08203ae7 );
+  background-attachment: fixed;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.headingLoginAdmin{
+    position:absolute;
+    top:160px;
+    font-size:50px;
+    font-weight:bold;
+    text-decoration: solid;
+    text-shadow: 0 3px 5px #e8b1f4;
+    color:rgba(70, 13, 64, 0.838)
+}
+.loginAdminDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;   
+}
+.adminFormData{
+    background: linear-gradient(180deg,
+    #ee82ee5e, 
+    #cf70f88d, 
+    #9b30ff35 );
+    position: absolute;
+    top:300px;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+.feild{
+    display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.form-field label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  /* color: #9118c9; */
+}
+
+.form-field input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  
+}
+
+.form-field input:focus {
+  border-color: #007bff;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+   color: #eee8ff;
+  background-color: rgb(110, 34, 181) !important;
+  border: 0;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.registerLink{
+  color: rgb(157, 70, 159);
+  padding: 8px;
+  text-align: center;
+  text-shadow: 5px 0 5px #e8b1f4;
+}

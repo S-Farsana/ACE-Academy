@@ -25,13 +25,12 @@
     color:rgba(70, 13, 64, 0.838)
 }
 
-
 .cardDiv{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    
+    justify-content: center;   
 }
+
 .card{
     display: flex;
     justify-content: center;

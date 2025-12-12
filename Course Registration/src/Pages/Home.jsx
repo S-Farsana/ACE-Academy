@@ -7,7 +7,7 @@ import newCourse from '../assets/image/newcourse.jpg'
 
 function Home() {
     const admin = JSON.parse(localStorage.getItem('admin'))
-    const student = JSON.parse(localStorage.getItem('stud'))
+    // const student = JSON.parse(localStorage.getItem('stud'))
 
     return (
         <div className='homePage'>
