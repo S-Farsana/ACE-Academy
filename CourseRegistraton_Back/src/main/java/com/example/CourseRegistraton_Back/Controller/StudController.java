@@ -21,6 +21,8 @@ import com.example.CourseRegistraton_Back.Model.Course;
 import com.example.CourseRegistraton_Back.Model.Student;
 import com.example.CourseRegistraton_Back.Repository.CourseRepo;
 import com.example.CourseRegistraton_Back.Repository.StudentRepo;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @CrossOrigin("*")
 @RestController
@@ -108,4 +110,11 @@ public ResponseEntity<?> enrollCourse(
 
         return ResponseEntity.ok(student);
     }
+    //Count of students
+    @GetMapping("/count")
+    public ResponseEntity<Long> getStudentCount() {
+        long count = studRepository.count();
+        return new ResponseEntity<>(count, HttpStatus.OK);
+    }
+    
 }

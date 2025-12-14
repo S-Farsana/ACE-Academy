@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import '../Pages/Register.css'
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
@@ -19,22 +18,22 @@ function Register() {
   };
 
   return (
-    <div className='MainBodyAbout'>
-      <h1 className='headings'>Register Yourself</h1>
+    <div className='mainRegister'>
+      <h1 className='headingRegister'>Register Yourself</h1>
 
-      <div className='formDiv'>
-        <form onSubmit={handleSubmit(onSubmit)} className='formData'>
+      <div className='registerDiv'>
+        <form onSubmit={handleSubmit(onSubmit)} className='registerFormData'>
 
           <input type='text'
             placeholder='Enter your Name'
-            className='feild'
+            className='feild registerFeild '
             {...register('stud_name', { required: 'Student name required' })} />
           {errors.stud_name && <p className='error'>{errors.stud_name.message}</p>}
 
           <input
             type='email'
             placeholder='Enter your email'
-            className='feild'
+            className='feild registerFeild'
             {...register('studEmail', { required: 'email required' })}
           />
           {errors.studEmail && <p className='errror'>{errors.studEmail.message}</p>}
@@ -42,31 +41,24 @@ function Register() {
           <input
             type='number'
             placeholder='Mobile Number'
-            className='feild'
+            className='feild registerFeild'
             {...register('stud_mob', { required: 'Mobile no.required' })} />
           {errors.stud_mob && <p className='error'>{errors.stud_mob.message}</p>}
-
 
           <input
             type='text'
             placeholder='Enter highest Qualification'
-            className='feild'
+            className='feild registerFeild'
             {...register('stud_qualification', { required: 'Enter your  qualification' })} />
           {errors.stud_qualification && <p className='error'>{errors.stud_qualification.message}</p>}
 
-
-
           <input type="password"
             placeholder='Create a password'
-            className='feild'
+            className='feild registerFeild'
             {...register('studPassword', { required: 'Password is required' })} />
 
           {errors.studPassword && (<p className="error">{errors.studPassword.message}</p>)}
-    
-
-
-      <button type='submit' className="btn btn-primary btns1">Submit</button>
-
+      <button type='submit' className="btn btn-primary btnRegister">Submit</button>
     </form>
               </div >
               </div>

@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from 'react'
 import '../Pages/AddCourse.css'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 function AddCourse() {
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   const onSubmit = (data) => {
+    axios
+    .post("http://localhost:8080/api/course", data)
     console.log('Submitted Sucessfully!', data);
     alert('Course added successfully!');
     reset();
-
   }
 
   return (
-    <div >
-      <h1 className="headings">Add a New Course</h1>
-      <div className="course-container">
-        <form onSubmit={handleSubmit(onSubmit)} className="formData">
+    <div className='mainAddCourse'>
+      <h1 className="headingAddCourse">Add a New Course</h1>
+      <div className='addCourseDiv'>
+        <form onSubmit={handleSubmit(onSubmit)} className="formDataAddCourse">
 
           {/* Course Name */}
           <input
             type="text"
-            className="feild"
+            className="feild feildAddCourse"
             placeholder="Enter Course Name"
             {...register('courseName', { required: 'Course name is required' })}
           />
@@ -32,30 +32,36 @@ function AddCourse() {
           {/* Course Duration */}
           <input
             type="text"
-            className="feild"
+            className="feild feildAddCourse"
             placeholder="Enter Course Duration (in months)"
             {...register('courseDuration', { required: 'Course duration is required' })}
           />
           {errors.courseDuration && <p className="error">{errors.courseDuration.message}</p>}
 
+          {/* course fee */}
+          <input
+  type="number"
+  className="feild feildAddCourse"
+  placeholder="Enter Course Fee"
+  {...register('courseFee', { required: 'Course fee is required' })}
+/>
+{errors.courseFee && <p className="error">{errors.courseFee.message}</p>}
+
           {/* Trainer Name */}
           <input
             type="text"
-            className="feild"
+            className="feild feildAddCourse"
             placeholder="Enter Trainer Name"
-            {...register('courseTrainer', { required: 'Trainer name is required' })}
+            {...register('trainerName', { required: 'Trainer name is required' })}
           />
-          {errors.courseTrainer && <p className="error">{errors.courseTrainer.message}</p>}
+          {errors.trainerName && <p className="error">{errors.trainerName.message}</p>}
 
           {/* Buttons */}
-          <div className="button-group">
-            <button type="submit" className="btn btn-primary submit-btn">
-              Submit
-            </button>
+  <button type="submit" className="btn btn-primary btnAddCourse"> Submit</button>
             {/* <Link to="../" className="btn btn-secondary cancel-btn">
             Cancel
           </Link> */}
-          </div>
+          
         </form>
       </div>
     </div>

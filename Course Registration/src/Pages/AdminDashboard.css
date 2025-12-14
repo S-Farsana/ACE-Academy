@@ -17,45 +17,25 @@
    text-shadow: 0 3px 5px #e8b1f4;
    color:rgba(70, 13, 64, 0.838)}
 
-.subHeadingAdminDash{
-    position:relative;
-    top:100px;
-    text-shadow: 0 3px 5px #e8b1f4;
-    color:rgba(70, 13, 64, 0.838)
-}
-
-    .studList{
-    position:absolute;
-    top:150px;
-    color: rgb(7, 17, 49);
-    background: linear-gradient(180deg,
-    #ee82ee5e, 
-    #cf70f88d, 
-    #2302425d );
-    border-collapse: collapse;
-    border: 1px solid #53366d;
+   .cardStyle{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 100px;
+    padding: 30px;
+    gap: 100px;
    }
 
-   .studList th,
-.studList td {
-  border: 1px solid #0c0b0d;
-  padding: 10px;
-  text-align: center;
+.cardBody{
+    border: 2px solid rgb(78, 22, 147);
+    border-radius: 10px;
+    background-color: rgba(90, 46, 143, 0.317);
 }
 
-/* --------------------------- */
-.courseSubTable {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 2px;
-  
+.cardBody h5{
+    text-shadow: 2px 0 2px #e8b1f4;
 }
-
-.courseSubTable th,
-.courseSubTable td {
-  border: none;
-  padding: 4px;
-  font-size: 16px;
-  text-align: left;
+.cardBody h4{
+    text-align: center;
+    color: rgb(5, 218, 218);
 }
-

@@ -36,7 +36,7 @@ function Login() {
             <h1 className='headingLogin'>Login</h1>
             <div className='loginDiv'>
 
-                <form onSubmit={handleSubmit(onSubmit)} className="formData">
+                <form onSubmit={handleSubmit(onSubmit)} className="formDataLogin">
                     <div className="feild">
                         <label >Username </label>
                         <input 

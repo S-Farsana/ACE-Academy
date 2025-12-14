@@ -28,10 +28,10 @@ top:160px;
   align-items: center;
   justify-content: center;   
 }
-.formData{
+.formDataLogin{
     background: linear-gradient(180deg,
     #ee82ee5e, 
-    #cf70f88d, 
+    hsla(282, 91%, 71%, 0.553), 
     #9b30ff35 );
   position: absolute;
   top:300px;
@@ -44,23 +44,21 @@ top:160px;
   max-width: 400px;
 }
 .feild{
-    display: flex;
+  display: flex;
   flex-direction: column;
   margin-bottom: 1.25rem;
+  width: 100%;
+  padding: 10px 12px;
+  
+  font-size: 1rem;
 }
 
 .form-field label {
   font-weight: 500;
   margin-bottom: 0.5rem;
-  /* color: #9118c9; */
-}
-
-.form-field input {
   padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
   font-size: 1rem;
-  
+  /* color: #9118c9; */
 }
 
 .form-field input:focus {
